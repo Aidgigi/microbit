@@ -125,38 +125,4 @@ class Driver:
         if mode == 0:
             self.stop()
 
-
-
 robot = Driver([13, 14], [16, 15], 10)
-
-# making a sort of rc car
-import radio
-
-radio.on()
-radio.config(data_rate = radio.RATE_250KBIT, channel = 10, power = 7)
-
-"""
-Here, we define some important codes in controlling the robot.
-(Int) 1: Drive straight.
-(Int) 2: Stop drive straight.
-(Int) 3: Turn Left.
-(Int) 4: Stop turn left.
-(Int) 5: Turn Right.
-(Int) 6: Stop turn right.
-"""
-
-message = 0
-
-while True:
-    msg = radio.receive()
-
-    message = msg if msg != None else message
-
-    display.show(str(message))
-    if message:
-        if message == '1': robot.forward_toggle(1, speed = 40)
-        if message == '2': robot.stop()
-        if message == '3': robot.turn_toggle(1, 2)
-        if message == '4': robot.stop()
-        if message == '5': robot.turn_toggle(1, 1)
-        if message == '0': robot.stop()
