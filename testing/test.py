@@ -6,6 +6,10 @@ radio.on()
 radio.config(data_rate = radio.RATE_250KBIT, channel = 10)
 
 while True:
+    msg = radio.receive()
+    if msg:
+        count = int(msg)
+
     if button_a.is_pressed():
         count -= 1
 
