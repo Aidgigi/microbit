@@ -37,8 +37,8 @@ class Driver:
                 self.stop()
 
             else:
-                self.L_F.write_analog(round(((speed / 100), 3) * self.analog_max))
-                self.R_F.write_analog(round(((speed / 100), 3) * self.analog_max))
+                self.L_F.write_analog(round((speed / 100) * self.analog_max))
+                self.R_F.write_analog(round((speed / 100) * self.analog_max))
                 sleep(time)
                 self.stop()
 
@@ -50,8 +50,8 @@ class Driver:
             self.stop()
 
         else:
-            self.L_B.write_analog(round(((speed / 100), 3) * self.analog_max))
-            self.R_B.write_analog(round(((speed / 100), 3) * self.analog_max))
+            self.L_B.write_analog(round((speed / 100) * self.analog_max))
+            self.R_B.write_analog(round((speed / 100) * self.analog_max))
             sleep(time)
             self.stop()
 
@@ -66,8 +66,8 @@ class Driver:
                     self.stop()
 
                 else:
-                    self.R_F.write_analog(round(((speed / 100), 3) * self.analog_max))
-                    self.L_B.write_analog(round(((speed / 100), 3) * self.analog_max))
+                    self.R_F.write_analog(round((speed / 100) * self.analog_max))
+                    self.L_B.write_analog(round((speed / 100) * self.analog_max))
                     sleep(time)
                     self.stop()
 
@@ -79,8 +79,8 @@ class Driver:
                     self.stop()
 
                 else:
-                    self.R_B.write_analog(round(((speed / 100), 3) * self.analog_max))
-                    self.L_F.write_analog(round(((speed / 100), 3) * self.analog_max))
+                    self.R_B.write_analog(round((speed / 100) * self.analog_max))
+                    self.L_F.write_analog(round((speed / 100) * self.analog_max))
                     sleep(time)
                     self.stop()
 
@@ -92,7 +92,7 @@ class Driver:
                     self.R_F.write_digital(1)
 
                 else:
-                    spe = round(((speed / 100), 3) * self.analog_max)
+                    spe = round((speed / 100) * self.analog_max)
                     self.L_F.write_analog(spe)
                     self.R_F.write_analog(spe)
 
@@ -102,7 +102,7 @@ class Driver:
                     self.R_B.write_digital(1)
 
                 else:
-                    spe = round(((speed / 100), 3) * self.analog_max)
+                    spe = round((speed / 100) * self.analog_max)
                     self.L_B.write_analog(spe)
                     self.R_B.write_analog(spe)
 
@@ -117,8 +117,8 @@ class Driver:
                     self.L_B.write_digital(1)
 
                 else:
-                    self.R_F.write_analog(round(((speed / 100), 3) * self.analog_max))
-                    self.L_B.write_analog(round(((speed / 100), 3) * self.analog_max))
+                    self.R_F.write_analog(round((speed / 100) * self.analog_max))
+                    self.L_B.write_analog(round((speed / 100) * self.analog_max))
 
             if direction == 1:
                 if speed == 100:
@@ -126,8 +126,8 @@ class Driver:
                     self.L_F.write_digital(1)
 
                 else:
-                    self.R_B.write_analog(round(((speed / 100), 3) * self.analog_max))
-                    self.L_F.write_analog(round(((speed / 100), 3) * self.analog_max))
+                    self.R_B.write_analog(round((speed / 100) * self.analog_max))
+                    self.L_F.write_analog(round((speed / 100) * self.analog_max))
 
         if mode == 0:
             self.stop()
