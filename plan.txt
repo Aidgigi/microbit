@@ -1,0 +1,7 @@
+Plan:
+ - Drive in a square:
+  - Start by pressing a button, then drive 5 feet
+    drive North, turn East and drive 5 feet
+    Spin three times and go South 5 feet, turn West
+    and drive 5 feet, when complete, display a
+    smiling face.
